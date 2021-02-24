@@ -44,7 +44,7 @@ function RightClickMenu({ canvas, reset }) {
         document.addEventListener('click', hideMenu);
 
         return function cleanup() {
-            document.removeEventListener()
+            document.removeEventListener('click', hideMenu)
         }
     }, [])
 
