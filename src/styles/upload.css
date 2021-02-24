@@ -1,0 +1,100 @@
+#ImageUploadContainer {
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ImageUploadContainer #DropZone {
+    background-color: #171719;
+    color: white;
+    height: 350px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    outline: 2px dashed white;
+    outline-offset: -8px;
+    position: relative;
+}
+
+#ImageUploadContainer #DropZone.invalid {
+    outline: 2px dashed red;
+}
+
+@keyframes arrowMove {
+    from {
+        top: 50px;
+    }
+    to {
+        top: 80px;
+    }
+}
+
+#ImageUploadContainer #DropZone.hover::before {
+    animation: 1s linear infinite alternate arrowMove;
+}
+
+#ImageUploadContainer #DropZone::before {
+    top: 50px;
+    width: 92px;
+    height: 106px;
+    content: "";
+    position: absolute;
+    background-image: url("../icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ImageUploadContainer #DropZone::after {
+    top: 150px;
+    width: 240px;
+    height: 70px;
+    content: "";
+    position: absolute;
+    background-image: url("../icons/box.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ImageUploadContainer #DropZone span {
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#ImageUploadContainer #DropZone label {
+    text-decoration: underline;
+}
+
+#ImageUploadContainer #DropZone label:hover {
+    cursor: pointer;
+}
+
+#ImageUploadContainer #DropZone input {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+    #ImageUploadContainer #DropZone {
+        height: 350px;
+        width: 80%;
+    }
+
+    #ImageUploadContainer #DropZone::before {
+        background-size: 80%;
+    }
+
+    #ImageUploadContainer #DropZone::after {
+        background-size: 80%;
+    }
+
+    #ImageUploadContainer #DropZone span {
+        font-size: 28px;
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

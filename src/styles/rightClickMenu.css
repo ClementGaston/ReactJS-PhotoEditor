@@ -1,0 +1,34 @@
+#RightClick {
+    width: 12rem;
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 2px #999;
+    border-radius: 0.2rem;
+    list-style: none;
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    background-color: #292A2D;
+    border: 1px solid #3C4043;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    padding: 5px 0;
+}
+
+#RightClick.off {
+    top: -200%;
+    left: -200%;
+}
+
+#RightClick li {
+    padding: 10px;
+    color: white;
+    padding-left: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins-ExtraLight', 'Poppins-Regular', 'Arial';
+}
+
+#RightClick li:hover {
+    background-color: #4B4C4F;
+}
